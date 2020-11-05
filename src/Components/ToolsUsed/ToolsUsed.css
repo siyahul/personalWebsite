@@ -1,0 +1,150 @@
+.toolsUsed{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(#ADB9CA,#46566C);
+}
+.toolsUsed__container{
+    max-width: 1200px;
+    width:100%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.toolsUsed__container > .para{
+    font-family: 'Poppins', sans-serif;
+    font-weight:bold;
+    color:#fff;
+    text-align:center;
+    font-size: 120px;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+.toolsUsed__container > .onView{
+    transition: all 2s ease-in-out;
+    animation: rightToLeft2 2s;
+    animation-delay:0ms;
+    opacity: 1;
+}
+
+.toolsUsed__section{
+    width:100%;
+    display: flex;
+    opacity: 0;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    padding:20px;
+    transition: all 2s ease-in-out;
+    flex-wrap: wrap;
+}
+.toolsUsed__sectionAnimate{
+    transition: all 4s ease-in-out;
+    opacity: 1;
+}
+.toolsUsed__tools{
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    margin:50px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.toolsUsed__tools img{
+    width:122px;
+    height: 122px;
+    object-fit: contain;
+}
+.toolsUsed__tools p{
+    font-size: 10px;
+    color:#000;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+.toolsUsed__tools:hover{
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+}
+.toolsUsed__banner{
+    width:200px;
+    height: 200px;
+    object-fit: contain;
+    padding:30px;
+    transition: all 0.5s linear;
+}
+.toolsUsed__banner:hover,.reactRotate{
+    animation-name: rotate;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-delay: 0ms;
+    animation-timing-function: linear;
+}
+.reduxUpDown{
+    animation-name: upDown;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: 0ms;
+    animation-timing-function: linear;
+}
+
+@media (max-width:1024px){
+    .toolsUsed__container > .para{
+        font-size:90px;
+    }
+}
+@media (max-width:768px){
+    .toolsUsed__container > .para{
+        font-size:60px;
+    }
+}
+@media (max-width:465px){
+    .toolsUsed__container > .para{
+        font-size:40px;
+    }
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes upDown{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes rightToLeft2{
+    0%{
+        transform: translateX(200%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}

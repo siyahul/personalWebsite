@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+.heroSection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(#46566c, #adb9ca);
+}
+.heroSection__container {
+  max-width: 1200px;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+.heroSection__hi {
+  color: white;
+  font-size: 161px;
+  font-family: "Poppins", sans-serif;
+  padding: 30px;
+  padding-bottom: 0;
+  transition: all 1s ease-in-out;
+  animation: leftToRight 1s;
+}
+
+.heroSection__name {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  font-size: 50px;
+  padding: 30px;
+  color: #1a2637;
+  margin-left: 100px;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 1.7s ease-in-out;
+  animation: rightToLeft 1.7s;
+  animation-delay: 0s;
+  z-index: 1;
+}
+.heroSection__name span {
+  color: #000;
+  font-size: 60;
+}
+.heroSection__info {
+  color: #fff;
+  font-size: 26px;
+  text-align: center;
+  max-width: 400px;
+  padding: 0;
+  margin: 0;
+}
+.heroSection__logos {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+  transition: all 4s ease-in-out;
+  animation: fade 4s;
+}
+.heroSection__logos img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.heroSection__banner {
+  position: absolute;
+  top: 90px;
+  right: 30px;
+  z-index: 0;
+  animation: fade 3s;
+  transition: all 3s ease-in-out;
+}
+.heroSection__banner img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+  .heroSection__banner img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection__hi {
+    font-size: 130px;
+  }
+  .heroSection__name {
+    font-size: 30px;
+    padding: 20px;
+    margin: 20px;
+  }
+  .heroSection__name span {
+    color: #000;
+    font-size: 50;
+  }
+  .heroSection__info {
+    font-size: 22px;
+  }
+  .heroSection__logos {
+    flex-wrap: wrap;
+  }
+  .heroSection__logos img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+  }
+  .heroSection__banner img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+  }
+}
+@media (max-width: 460px) {
+  .heroSection__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .heroSection__hi {
+    text-align: center;
+    font-size: 130px;
+    padding: 0;
+  }
+  .heroSection__name {
+    text-align: center;
+    font-size: 25px;
+    margin: 20px;
+  }
+  .heroSection__name span {
+    color: #000;
+    font-size: 40;
+  }
+  .heroSection__info {
+    font-size: 20px;
+  }
+  .heroSection__logos {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .heroSection__logos img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+  }
+  .heroSection__banner {
+    display: none;
+  }
+}
+
+@keyframes leftToRight {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes rightToLeft {
+  0% {
+    transform: translateX(400%);
+  }
+  60% {
+    transform: translateX(400%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
